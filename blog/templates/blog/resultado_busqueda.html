@@ -1,0 +1,11 @@
+<p>Estamos buscando la camada: {{ marca }}</p>
+
+{% if AutosNuevos_encontrados %}
+
+<ul>
+{% for AutosNuevo in AutosNuevos_encontrados %}
+    <li>{{AutosNuevo.marca}} (modelo {{AutosNuevo.modelo}})</li>
+{% endfor %}
+</ul>
+
+{% endif %}
