@@ -53,7 +53,7 @@ class AutosUpdateView(LoginRequiredMixin, UpdateView):
 class AutosDelete(LoginRequiredMixin, DeleteView):
 
     model = AutosNuevo
-    success_url = "/blog/curso/list"
+    success_url = "/blog/Autos/list"
 
 
 @login_required
