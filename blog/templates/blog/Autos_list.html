@@ -1,0 +1,24 @@
+{% extends "blog/madre.html" %}
+{% block inserte_aqui_su_contenido %}
+
+<h1>Cursos de Coder - Python </h1>
+{% if object_list %}
+
+    <ul>
+        {% for AutosNuevo in object_list %}
+
+      <li>
+               <p>Marca: {{ AutosNuevo.marca }}</p>
+            <p>
+                <a href="{% url 'AutosDetail' AutosNuevo.id %}">Ver auto</a>
+                <a href="{% url 'AutosUpdate' AutosNuevo.id %}">Editar</a>
+                <a href="{% url 'AutosDelete' AutosNuevo.id %}">Borrar</a>
+            </p>
+
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+<h3>No hay autos agregados aún!</h3>
+{% endif %}
+{% endblock %}

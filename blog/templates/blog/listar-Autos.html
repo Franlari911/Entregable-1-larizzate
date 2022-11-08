@@ -1,0 +1,7 @@
+{% extends "blog/madre.html" %}
+{% block inserte_aqui_su_contenido %}
+{% for AutosNuevo in AutosNuevos_encontrados %}
+{{AutosNuevo.marca}} (modelo {{AutosNuevo.modelo}})
+    <br>
+{% endfor %}
+{% endblock %}
